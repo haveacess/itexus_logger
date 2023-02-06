@@ -1,5 +1,7 @@
 <?php
 
+namespace Lumi;
+
 class Settings {
     /**
      * Directory for logging files

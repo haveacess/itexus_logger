@@ -1,5 +1,9 @@
 <?php
 
+namespace Lumi;
+
+use IntBackedEnum;
+
 enum LogLevel: int
 {
 

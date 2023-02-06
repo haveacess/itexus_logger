@@ -1,0 +1,20 @@
+{
+  "name": "lumi/lumi",
+  "description": "Store you logs in app",
+  "keywords": ["log"],
+  "homepage": "https://github.com/haveacess/itexus_logger",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Vladislav Pachamovich",
+      "email": "haveacess@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=8.1"
+  },
+  "autoload": {
+    "psr-4": {"Lumi\\": "src/Lumi"}
+  }
+}

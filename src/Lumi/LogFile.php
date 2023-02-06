@@ -5,7 +5,6 @@ namespace Lumi;
 
 use DateTime;
 use InvalidArgumentException;
-use LogLevel;
 
 class LogFile {
 

@@ -2,8 +2,6 @@
 
 namespace Lumi;
 
-use LogLevel;
-
 class LogMessage {
 
     private string $message = '';

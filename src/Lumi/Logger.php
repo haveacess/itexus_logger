@@ -3,8 +3,6 @@
 namespace Lumi;
 
 use InvalidArgumentException;
-use LogLevel;
-use Settings;
 
 class Logger {
 
@@ -67,11 +65,9 @@ class Logger {
     {
         $settings = new Settings();
 
-        // тоетсть тут только вытянуть из енв. все
-        // все проверки написаны, если что ругаться будет
-        $settings->currentLevel = 'EMERGENCY'; // вытянуть из .env
-        $settings->pathFolder = '/var/www/html/logs'; // вытянуть из .env
-        $settings->maxFileRows = 5; // вытянуть из .env иначе заюзать как есть
+        $settings->currentLevel = getenv('LUMI_LOG_LEVEL');
+        $settings->pathFolder = getenv('LUMI_LOG_FOLDER');
+        $settings->maxFileRows = (int)getenv('LUMI_MAX_FILE_ROWS');
 
         return (new self($settings));
     }
