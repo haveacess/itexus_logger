@@ -31,6 +31,11 @@ class Logger {
     {
         $this->pathFolder = new LogFolder($settings->pathFolder);
         $this->currentLevel = self::getCurrentLevel($settings->currentLevel);
+
+        if ($settings->maxFileRows === 0) {
+            throw new InvalidArgumentException('maxFileRows cannot be zero');
+        }
+
         $this->maxFileRows = $settings->maxFileRows;
     }
 
