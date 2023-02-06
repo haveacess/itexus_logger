@@ -4,8 +4,6 @@ require __DIR__ . '/vendor/autoload.php';
 
 use Lumi\Logger;
 
-var_dump(getenv('LUMI_LOG_FOLDER'));
-
 Logger::debug('Connect to :part by :port', [
     'part' => 'database',
     'port' => '3306'
